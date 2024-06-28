@@ -28,11 +28,11 @@ const Footer = () => {
                     <p> &nbsp; Help & Support</p>
                     </div>
                     <div className="w-full  text-10px md:w-[15%] mt-5">
-                      <p className="text-[20px] font-normal text-white dark:text-white">
+                      <p className="text-[15px] font-normal text-white dark:text-white">
                         FreeLancer
                       </p>
                       <hr className="w-[60%] mt-5 mb-5 border-[2px] border-[#FFBB6B]" />
-                      <ul className="text-white text-body flex flex-col gap-2 font-normal">
+                      <ul className="text-white text-[15px] flex flex-col gap-2 font-normal">
                         <li>
                           <Link
                             to=""
@@ -167,7 +167,7 @@ const Footer = () => {
                       About us
                       </p>
                       <hr className="w-[60%] mt-5 mb-5 border-[2px] border-[#FFBB6B]" />
-                      <ul className="text-white text-body flex flex-col gap-5 font-normal">
+                      <ul className="text-white text-[15px] flex flex-col gap-5 font-normal">
                         <li>
                           <Link
                             to=""
@@ -243,12 +243,12 @@ Security
                       </ul>
 
                     </div>
-                    <div className="w-full md:w-[15%] mt-5">
-                      <p className="text-[20px] font-normal text-white dark:text-white">
+                    <div className="w-full md:w-[15%]  gap-9 mt-5">
+                      <p className="text-[20px] font-normal text-white  dark:text-white">
                        Terms
                       </p>
                       <hr className="w-[60%] mt-5 mb-5 border-[2px] border-[#FFBB6B]" />
-                       <div className=" text-[15px] text-white">
+                       <div className=" text-[15px]  text-white">
                        <p>Privacy Policy
                        </p>
                         <p>Terms and Conditions</p>
