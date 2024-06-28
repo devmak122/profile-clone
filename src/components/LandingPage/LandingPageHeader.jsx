@@ -1,29 +1,31 @@
 import React from 'react';
-import './LandingPageHeader.css';
 import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-        <div className="header">
-            <div className="header__left">
+        <div className="flex justify-between items-center bg-white w-full z-100 py-4 px-6">
+            <div className="flex items-center">
                 <Link to="/">
                     <img
-                        className="header__logo"
+                        className="h-16 object-contain mr-4"
                         src="https://s3.amazonaws.com/fjds/gig_company/original/20/freelancer-logo.png?1587072521"
                         alt="logo"
                     />
                 </Link>
-                <h4>How It Works</h4>
-                <h4>Browse Jobs</h4>
+                <Link to="/">
+                <button className="ml-4 font-semibold font-poppins">How It Works</button>
+                </Link>
+                <Link to ="/">
+                  <button className="ml-4 font-semibold font-poppins">Browse Jobs</button>
+                  </Link>
             </div>
 
-            <div className="header__right">
-                <h4><Link to="/login">Log In</Link></h4>
-                <h4><Link to="/signup">Sign Up </Link></h4>
-                <button> Post a Project</button>
+            <div className="flex items-center mr-12">
+                <h4 className="mr-6 font-semibold font-poppins"><Link to="/login">Log In</Link></h4>
+                <h4 className="mr-6 font-semibold font-poppins"><Link to="/signup">Sign Up </Link></h4>
+                <button className="bg-primary font-lora text-white py-2 px-4 font-bold">Post a Project</button>
             </div>
-
-        </div >
+        </div>
     )
 }
 export default Header

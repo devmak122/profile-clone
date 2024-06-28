@@ -1,14 +1,13 @@
 import React from 'react';
-import './Content.css';
 import Single from './Single';
 
 function Content() {
     return (
-        <div className="content">
-            <div className="content__heading">
-                <h2>What's great about it?</h2>
+        <div className="flex flex-col items-center ml-10 mb-20">
+            <div className="mb-9">
+                <h2 className="text-center font-bold text-4xl leading-tight">What's great about it?</h2>
             </div>
-            <div className="content__single">
+            <div className="flex justify-evenly mx-12">
                 <Single
                     src="https://www.f-cdn.com/assets/main/en/assets/home/benefits/browse-portfolios-v2.svg"
                     title="Browse portfolios"
@@ -25,7 +24,7 @@ function Content() {
                     content="You can live chat with your freelancers to get constant updates on the progress of your work."
                 />
             </div>
-            <div className="content__single">
+            <div className="flex justify-evenly mx-12">
                 <Single
                     src="https://www.f-cdn.com/assets/main/en/assets/home/benefits/pay-v2.svg"
                     title="Pay for quality"
@@ -42,9 +41,8 @@ function Content() {
                     content="We're always here to help. Our support consists of real people who are available 24/7."
                 />
             </div>
-
         </div>
     )
 }
 
-export default Content
+export default Content;

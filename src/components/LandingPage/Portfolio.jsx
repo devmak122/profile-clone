@@ -1,10 +1,9 @@
 import React from 'react';
-import './Portfolio.css';
 import Data from './Data';
 
 function Portfolio() {
     return (
-        <div className="portfolio">
+        <div className="flex items-center    font-poppins content-center ml-12 p-6">
             <Data
                 src="https://www.f-cdn.com/assets/main/en/assets/home/api-enterprise/api_upsell.png"
                 title="FREELANCER API"
@@ -23,4 +22,4 @@ function Portfolio() {
     )
 }
 
-export default Portfolio
+export default Portfolio;

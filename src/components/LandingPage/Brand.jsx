@@ -1,11 +1,10 @@
 import React from 'react';
-import './Brand.css';
 
 function Brand() {
     return (
-        <div className="brands">
-            <div className="brands__info">
-                <h4>As used by</h4>
+        <div className="flex ml-8 mb-5">
+            <div className="flex items-center justify-between m-4 p-5 w-[90%] border-b border-gray-400">
+                <h4 className="font-medium text-2xl">As used by</h4>
                 <img src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/amazon_logo2.svg" alt="amazon" />
                 <img src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/facebook-corporate-logo2.svg" alt="facebook" />
                 <img src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/deloitte-logo2.svg" alt="deloitte" />
@@ -15,10 +14,7 @@ function Brand() {
                 <img src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/airbus-logo2.svg" alt="airbus" />
             </div>
         </div>
-
-
-
     )
 }
 
-export default Brand
+export default Brand;

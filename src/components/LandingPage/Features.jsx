@@ -1,14 +1,15 @@
 import React from 'react';
-import './Features.css';
 import Feature from './Feature';
 
 function Features() {
     return (
-        <div className="features">
-            <div className="features__heading">
-                <h1>Need something done?</h1>
+        <div className="flex flex-col justify-center pt-6 mx-[30px]">
+            <div className="text-center mb-6">
+                <h1 className="font-bold text-[50px] leading-[65px] mb-5">
+                    Need something done?
+                </h1>
             </div>
-            <div className="features__single">
+            <div className="flex flex-col lg:flex-row justify-between p-5 mx-[50px] space-y-5 lg:space-y-0 lg:space-x-5">
                 <Feature
                     src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/need-work-done/post-a-job-redesign.svg"
                     title="Post a job"
@@ -25,9 +26,8 @@ function Features() {
                     content="With secure payments and thousands of reviewed professionals to choose from, Freelancer.com is the simplest and safest way to get work done online."
                 />
             </div>
-
         </div>
-    )
+    );
 }
 
 export default Features;
