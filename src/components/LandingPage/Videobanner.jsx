@@ -1,6 +1,5 @@
 import React from 'react';
-import bg from './bg.jpg'; // Adjust the path to your image file
-
+import bg from "./bg.jpg"; 
 function VideoBanner() {
     return (
         <div className="relative h-[600px] bg-center">

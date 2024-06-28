@@ -19,6 +19,8 @@ import Features from "./components/LandingPage/Features";
 import Content from "./components/LandingPage/Content";
 import Projects from "./components/LandingPage/Projects";
 import Portfolio from "./components/LandingPage/Portfolio";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 
 function App() {
@@ -31,25 +33,41 @@ function App() {
             path="/"
             element={
               <>
-               <LandingPageHeader/>
-            <VideoBanner />
-            <Brand />
-            <Features />
-            <Content />
-            <Projects />
-           
-            <Portfolio />
-            <Footer />
+                <LandingPageHeader />
+                <VideoBanner />
+                <Brand />
+                <Features />
+                <Content />
+                <Projects />
+
+                <Portfolio />
+                <Footer />
               </>
             }
           />
-<Route
+
+
+          <Route path="/login" element={
+           <>
+            <LandingPageHeader/>
+           <Login />
+           <Footer/>
+           </>
+            } />
+          <Route path="/signup" element={
+            <>
+            <LandingPageHeader/>
+            <SignUp />
+            <Footer/>
+            </>
+            } />
+          <Route
             path="/Dashboard"
             element={
               <>
                 <Header />
                 <Home />
-                <Dashboard/>
+                <Dashboard />
                 <Footer />
               </>
             }
@@ -128,7 +146,7 @@ function App() {
                 <Footer />
               </>
             }
-          />  
+          />
         </Routes>
       </div>
     </Router>

@@ -1,7 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 
 function Header() {
+        let navigate=useNavigate();
+        const handlelogout=()=>{
+          localStorage.removeItem('token')
+          navigate('/login')
+        }
     return (
         <div className="flex justify-between items-center bg-white w-full z-100 py-4 px-6">
             <div className="flex items-center">
@@ -28,4 +35,4 @@ function Header() {
         </div>
     )
 }
-export default Header
+export default Header;
