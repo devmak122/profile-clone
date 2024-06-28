@@ -12,6 +12,15 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Lists from "./pages/Lists";
+import LandingPageHeader from "./components/LandingPage/LandingPageHeader";
+import VideoBanner from "./components/LandingPage/Videobanner";
+import Brand from "./components/LandingPage/Brand";
+import Features from "./components/LandingPage/Features";
+import Content from "./components/LandingPage/Content";
+import Projects from "./components/LandingPage/Projects";
+import Category from "./components/LandingPage/Category";
+import Portfolio from "./components/LandingPage/Portfolio";
+
 
 function App() {
   return (
@@ -23,6 +32,22 @@ function App() {
             path="/"
             element={
               <>
+               <LandingPageHeader/>
+            <VideoBanner />
+            <Brand />
+            <Features />
+            <Content />
+            <Projects />
+            <Category />
+            <Portfolio />
+            <Footer />
+              </>
+            }
+          />
+<Route
+            path="/Dashboard"
+            element={
+              <>
                 <Header />
                 <Home />
                 <Dashboard/>
@@ -30,17 +55,7 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/dashboard"
-            element={
-              <>
-                <Header />
-                <Home />
-                <Dashboard />
-                <Footer />
-              </>
-            }
-          />
+
           <Route
             path="/lists"
             element={
