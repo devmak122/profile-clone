@@ -9,16 +9,19 @@ function VideoBanner() {
                 <h4>
                     Millions of people use freelancer.com to turn their ideas into reality.
                 </h4>
-                <button className="videoBanner__info--first">
+                <div className='flex flex-row gap-4 px-4 font-poppins'>
+                <button className="videoBanner__info--first px-4">
                     Hire a Freelancer
                 </button>
-                <button className="videoBanner__info--second">
+                <button className="videoBanner__info--second px-4">
                     Earn Money Freelancing
                 </button>
+                </div>
             </div>
 
         </div>
     )
 }
 
-export default VideoBanner
+export default VideoBanner;
+

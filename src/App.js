@@ -13,12 +13,11 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Lists from "./pages/Lists";
 import LandingPageHeader from "./components/LandingPage/LandingPageHeader";
-import VideoBanner from "./components/LandingPage/Videobanner";
+import VideoBanner from "./components/LandingPage/VideoBanner";
 import Brand from "./components/LandingPage/Brand";
 import Features from "./components/LandingPage/Features";
 import Content from "./components/LandingPage/Content";
 import Projects from "./components/LandingPage/Projects";
-import Category from "./components/LandingPage/Category";
 import Portfolio from "./components/LandingPage/Portfolio";
 
 
@@ -38,7 +37,7 @@ function App() {
             <Features />
             <Content />
             <Projects />
-            <Category />
+           
             <Portfolio />
             <Footer />
               </>

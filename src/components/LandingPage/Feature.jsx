@@ -13,4 +13,4 @@ function Feature({ src, title, content }) {
     )
 }
 
-export default Feature
+export default Feature;
