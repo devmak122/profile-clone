@@ -9,18 +9,18 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const handleLinkClick = () => {
-    window.scrollTo(0, 0); // Scrolls to the top of the page
+    window.scrollTo(0, 0); 
   };
 
   return (
     <div className="mobile:overflow-x-hidden ">
       <div className="relative w-full h-full">
         <div className="trapz1 w-full">
-          <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 flex justify-center font-poppins font-normal text-xl bg-black">
+          <div className="w-full px-4 sm:px-6 md:px-12 lg:px-15 xl:px-32 flex justify-center font-poppins font-normal text-xl bg-black">
             <div className="w-full flex flex-col h-full">
               <div className="max-w-screen-xl w-full h-full py-7 px-4 sm:px-6 md:px-10 flex flex-col flex-wrap mx-auto">
                 <div className="flex w-full mt-10 sm:mt-20 md:mt-30 lg:mt-40 justify-between">
-                  <div className="flex gap-6 sm:gap-10 md:gap-15 lg:gap-20 flex-col md:flex-row w-full">
+                  <div className="flex gap-6 sm:gap-10 md:gap-15 lg:gap-15 flex-col md:flex-row w-full">
                     <div className="w-full md:w-[12%]">
                       <img src={logo} alt="" className="w-full h-auto" />
 
@@ -258,8 +258,8 @@ Security
                        </div>
 
                     </div>
-                    <div className="w-full md:w-[35%] mt-5">
-                      <div className="glassbg2 h-full rounded-[40px] gap-7 flex flex-col items-center justify-center pb-9">
+                    <div className="w-full md:w-[45%] mt-5">
+                      <div className="glassbg2 h-full rounded-[40px] gap-7 flex flex-col items-center justify-center p-3">
                         <p className="mt-6 text-[20px] font-normal text-primary dark:text-white">
                          Stories
                         </p>
