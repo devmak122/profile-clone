@@ -35,10 +35,10 @@ function App() {
               <>
                 <LandingPageHeader />
                 <VideoBanner />
+                <Projects />
                 <Brand />
                 <Features />
                 <Content />
-                <Projects />
 
                 <Portfolio />
                 <Footer />
