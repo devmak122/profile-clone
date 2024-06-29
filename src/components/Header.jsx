@@ -5,7 +5,9 @@ import ProfileDropdown from './ProfileDropdown'; // Ensure the correct path
 import BrowseDropdown from './BrowseDropdown'; // Ensure the correct path
 import logo from "../Images/logo.svg"
 import ManageDropdown from "./ManageDropdown";
-import NotificationDropdown from './NotificationDropdown'; // Adjust the import path accordingly
+import NotificationDropdown from './NotificationDropdown'; 
+import logowhite from "../Images/logowhite.svg";
+// Adjust the import path accordingly
 
 const Header = () => {
     const location = useLocation();
@@ -64,12 +66,12 @@ const Header = () => {
     };
 
     return (
-        <div className="w-full sticky bg-black mobile:overflow-x-hidden mobile:mt-0">
+        <div className="w-full  bg-black mobile:overflow-x-hidden font-Montserrat mobile:mt-0">
             <nav className="bg-black dark:bg-gray-900">
                 <div className="max-w-screen-xl flex flex-wrap justify-between items-center mx-auto p-4">
                     <Link to={"/"} onClick={closeMenu}>
                         <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                            <img src={logo} alt="Logo" />
+                            <img src={logowhite} alt="Logo"  className="w-[55%]"/>
                         </div>
                     </Link>
                     <button onClick={toggleMenu} data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded={menuOpen ? "true" : "false"}>
@@ -131,7 +133,7 @@ const Header = () => {
                                     <p className="block py-3 text-white mobile:justify-center mobile:text-center font-[600] text-[20px] font-poppins getInTouch px-5">Post a Project</p>
                                 </li>
                             </Link>
-                            <li className="text-4xl font-poppins items-center bg-white size-10">
+                            <li className="text-4xl font-poppins items-center justify-center     bg-white size-10">
                                 <ProfileDropdown />
                             </li>
                         </ul>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import yt from "../Images/yt.svg"
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const ProfileDropdown = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,8 +17,8 @@ const ProfileDropdown = () => {
 
 
     return (
-        <div className="relative inline-block text-left">
-            <div>
+        <div className="relative  inline-block text-left">
+            <div className='flex flex-row justify-center items-center'>
                 <button
                     onClick={toggleDropdown}
                     className="inline-flex justify-center w-full   px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-50  "
@@ -34,8 +35,8 @@ const ProfileDropdown = () => {
             {isOpen && (
                 <div className="origin-top-right absolute right-0 mt-2 w-64 text-center rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                        <p className='text-[19px] p-3 font-semibold '>Account</p>
-                        <a href="#view-profile" className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-700" role="menuitem">View profile</a>
+                          <p className='text-[19px] p-3 font-semibold '>Account</p>
+                        <Link to="/Profile" className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-700" role="menuitem">View profile</Link>
                         <a href="#membership" className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-700" role="menuitem">Membership</a>
                         <a href="#account-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-700" role="menuitem">Account analytics</a>
                         <a href="#bid-insights" className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-700" role="menuitem">Bid Insights</a>

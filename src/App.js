@@ -21,6 +21,7 @@ import Projects from "./components/LandingPage/Projects";
 import Portfolio from "./components/LandingPage/Portfolio";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import Profile from "./pages/Profile"
 
 
 function App() {
@@ -61,6 +62,18 @@ function App() {
             <Footer/>
             </>
             } />
+
+
+          <Route
+            path="/Profile"
+            element={
+              <>
+                <Header />
+                <Profile/>
+                <Footer />
+              </>
+            }
+          />
           <Route
             path="/Dashboard"
             element={
@@ -72,6 +85,7 @@ function App() {
               </>
             }
           />
+            
 
           <Route
             path="/lists"
