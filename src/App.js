@@ -22,6 +22,7 @@ import Portfolio from "./components/LandingPage/Portfolio";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Profile from "./pages/Profile"
+import Projectsfilter from "./pages/Projectsfilter";
 
 
 function App() {
@@ -70,6 +71,16 @@ function App() {
               <>
                 <Header />
                 <Profile/>
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Projectsfilter"
+            element={
+              <>
+                <Header />
+                <Projectsfilter/>
                 <Footer />
               </>
             }

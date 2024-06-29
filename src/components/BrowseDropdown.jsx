@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
@@ -6,6 +7,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 const BrowseDropdown = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     const handleSearchChange = (event) => {
         setLoading(true);
@@ -43,6 +45,10 @@ const BrowseDropdown = () => {
         category.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
+    const handleCategoryClick = (title) => {
+        navigate(`/projectsfilter?category=${title}`);
+    };
+
     return (
         <div className="absolute left-96 mt-2 w-[800px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
             <div className="p-4">
@@ -56,7 +62,11 @@ const BrowseDropdown = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
                 {filteredCategories.map((category, index) => (
-                    <div key={index} className="flex items-start p-2 hover:bg-gray-100 rounded-md cursor-pointer">
+                    <button
+                        key={index}
+                        className="flex items-start p-2 hover:bg-gray-100 rounded-md cursor-pointer w-full text-left"
+                        onClick={() => handleCategoryClick(category.title)}
+                    >
                         {loading ? (
                             <Skeleton circle={true} height={40} width={40} className="mr-4" />
                         ) : (
@@ -70,7 +80,7 @@ const BrowseDropdown = () => {
                                 {loading ? <Skeleton count={2} width={200} /> : category.description}
                             </p>
                         </div>
-                    </div>
+                    </button>
                 ))}
             </div>
         </div>
