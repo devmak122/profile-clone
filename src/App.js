@@ -21,6 +21,7 @@ import ProfileHeader from "./components/Profile/ProfileHeader";
 import ProfileInfo from "./components/Profile/ProfileInfo";
 import Membership from "./components/membership/membership"
 import ProfileAnalysis from "./components/Profile/ProfileAnalysis";
+import ProfileUpdate from "./components/UserSettings/ProfileUpdate"
 function App() {
   return (
     <Router>
@@ -102,6 +103,16 @@ function App() {
               <>
                 <Header />
                 <Membership />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <>
+                <Header />
+                <ProfileUpdate />
                 <Footer />
               </>
             }

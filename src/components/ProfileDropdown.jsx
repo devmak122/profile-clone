@@ -4,11 +4,21 @@ import yt from "../Images/yt.svg";
 
 const ProfileDropdown = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [username, setUsername] = useState('');
     const dropdownRef = useRef(null);
     const navigate = useNavigate();
 
+    useEffect(() => {
+        // Retrieve the username from local storage
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user && user.username) {
+            setUsername(user.username);
+        }
+    }, []);
+
     const handleLogout = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('user');
         navigate('/login');
     };
 
@@ -43,7 +53,7 @@ const ProfileDropdown = () => {
                 >
                     <img className="ml-1" src={yt} alt="yt" />
                     <span className="ml-5 text-white text-sm">
-                        Username <br />
+                        {username} <br />
                         INR
                     </span>
                 </button>

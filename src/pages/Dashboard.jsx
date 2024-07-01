@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const HeroSection = () => {
     return (
         <div className="bg-white-100 flex flex-col items-center py-3">
@@ -22,12 +22,13 @@ const HeroSection = () => {
                         description="A complete profile increases your chance of getting hired"
                         buttonText="Profile Page"
                     />
-                    <StepItem
+                  <Link to="/job-listing">
+                  <StepItem
                         icon="💼"
                         title="Place your first bid"
                         description="Browse through projects and place your first bid"
                         buttonText="Browse Projects"
-                        />
+                        /></Link>
                     </div>
                 </div>
 

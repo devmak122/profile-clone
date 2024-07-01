@@ -18,9 +18,9 @@ const Lists = () => {
     };
 
     return (
-        <div className="flex flex-col min-h-screen font-poppins">
-            <div className="flex-grow flex flex-col space-y-6 md:flex-row mx-4 md:mx-8 my-4">
-                <div className="w-full md:w-1/4 bg-white p-4 shadow-md rounded-lg mb-4 md:mb-0 ml-0 md:ml-8">
+        <div className="flex flex-col bg-gray-200  font-poppins">
+            <div className="flex-grow flex flex-col space-y-1 md:flex-row  gap-10 mx-4 md:mx-8 my-4">
+                <div className="w-full md:w-1/4 bg-white p-4 shadow-lg  rounded-lg mb-4 md:mb-0 ml-0 md:ml-8">
                     <div className='flex flex-row items-center justify-center'>
                         <h2 className="text-xl font-bold mb-4">Lists</h2>
                         <button
@@ -47,7 +47,7 @@ const Lists = () => {
                         
                     </ul>
                 </div>
-                <div className="w-full md:w-3/4 bg-white p-6 shadow-md font-poppins rounded-lg ml-0 md:ml-4">
+                <div className="w-full md:w-3/4 bg-white p-4 shadow-md font-poppins rounded-lg ml-0 md:ml-4">
                     <div className="text-center">
                         <h2 className="text-2xl text-start font-semibold mb-4">
                             {activeTab} <span className="text-light">private . 0 members</span>

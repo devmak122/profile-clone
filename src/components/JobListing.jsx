@@ -73,7 +73,7 @@ const JobListing = () => {
                     ) : (
                         currentJobs.map((job, index) => (
                             <div key={index} className="bg-white p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <div className="flex flex-col space-y-2">
+                                <div className="flex flex-col space-y-2 ">
                                     <div className="flex justify-between items-center">
                                         <h3 className="font-bold text-xl text-blue-600">{job.title}</h3>
                                         <div className="text-gray-600">
@@ -115,10 +115,10 @@ const JobListing = () => {
                                         </div>
                                         <div className="flex space-x-2">
                                             <button className={`text-green-600 hover:text-green-700 ${job.liked ? 'text-green-700' : ''}`}>
-                                                <i className="fas fa-thumbs-up"></i>
+                                                <i className="fa fa-thumbs-up"></i>
                                             </button>
                                             <button className={`text-red-600 hover:text-red-700 ${job.unliked ? 'text-red-700' : ''}`}>
-                                                <i className="fas fa-thumbs-down"></i>
+                                                <i className="fa fa-thumbs-down"></i>
                                             </button>
                                         </div>
                                     </div>

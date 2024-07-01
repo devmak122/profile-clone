@@ -35,21 +35,21 @@ import React from 'react';
                     {/* Add more categories as needed */}
                 </select>
             </div>
-            <div className="bg-white p-4 font-mono rounded-md shadow-sm mb-4">
+            <div className="bg-white p-4 font-mono   rounded-md shadow-sm mb-4">
                 <h2 className="font-bold mb-4">Experience level</h2>
-                <div>
+                <div className='font-normal'>
                     <label>
                         <input type="checkbox" name="entryLevel" onChange={handleCheckboxChange} className="mr-2" />
                         Entry Level
                     </label>
                 </div>
-                <div>
+                <div className='font-normal'>
                     <label>
                         <input type="checkbox" name="intermediate" onChange={handleCheckboxChange} className="mr-2" />
                         Intermediate
                     </label>
                 </div>
-                <div>
+                <div className='font-normal'>
                     <label>
                         <input type="checkbox" name="expert" onChange={handleCheckboxChange} className="mr-2" />
                         Expert
