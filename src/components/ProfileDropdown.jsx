@@ -9,7 +9,7 @@ const ProfileDropdown = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Retrieve the username from local storage
+        // Retrieve the username from local storage or application state
         const user = JSON.parse(localStorage.getItem('user'));
         if (user && user.username) {
             setUsername(user.username);
@@ -53,8 +53,14 @@ const ProfileDropdown = () => {
                 >
                     <img className="ml-1" src={yt} alt="yt" />
                     <span className="ml-5 text-white text-sm">
-                        {username} <br />
-                        INR
+                        {username ? (
+                            <>
+                                {username} <br />
+                                INR
+                            </>
+                        ) : (
+                            "soory" // Fallback if username is not available
+                        )}
                     </span>
                 </button>
             </div>

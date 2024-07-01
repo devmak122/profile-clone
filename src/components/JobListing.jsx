@@ -1,17 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Pagination from "./Pagination"
+import Pagination from "./Pagination";
 import SearchJobs from './SearchJobs';
-import Filters from "./Filters"
+import Filters from "./Filters";
 import JobSkeletonLoader from './JobSkeletonLoader';
-import { fetchJobsRequest,setSearchTerm, setFilters } from '../store/actions/jobActions';
+import { fetchJobsRequest, setSearchTerm, setFilters } from '../store/actions/jobActions';
+
 const JobListing = () => {
     const dispatch = useDispatch();
     const jobs = useSelector(state => state.job.jobs);
     const isLoading = useSelector(state => state.job.isLoading);
     const searchTerm = useSelector(state => state.job.searchTerm);
     const filters = useSelector(state => state.job.filters);
-    const [currentPage, setCurrentPage] = React.useState(1);
+    const [currentPage, setCurrentPage] = useState(1);
     const jobsPerPage = 10;
 
     useEffect(() => {
@@ -32,13 +33,60 @@ const JobListing = () => {
         if (searchTerm && !job.title.toLowerCase().includes(searchTerm.toLowerCase())) {
             return false;
         }
-        if (Object.keys(filters).length > 0) {
-            if (filters.minBudget && job.budget < filters.minBudget) {
+        if (filters.budget) {
+            const [minBudget, maxBudget] = filters.budget.split(' – ').map(b => parseInt(b.replace('$', '').replace(' USD', '')));
+            const [jobMinBudget, jobMaxBudget] = job.budget.split(' – ').map(b => parseInt(b.replace('$', '').replace(' USD', '')));
+            if (jobMinBudget < minBudget || jobMaxBudget > maxBudget) {
                 return false;
             }
-            if (filters.maxBudget && job.budget > filters.maxBudget) {
-                return false;
-            }
+        }
+        if (filters.bids && job.bids !== parseInt(filters.bids)) {
+            return false;
+        }
+        if (filters.averageBid && parseInt(job.average_bid.replace('$', '').replace(' USD', '')) !== parseInt(filters.averageBid.replace('$', '').replace(' USD', ''))) {
+            return false;
+        }
+        if (filters.tags && !filters.tags.split(',').every(tag => job.tags.includes(tag.trim()))) {
+            return false;
+        }
+        if (filters.rating && job.rating !== parseFloat(filters.rating)) {
+            return false;
+        }
+        if (filters.reviews && job.reviews !== parseInt(filters.reviews)) {
+            return false;
+        }
+        if (filters.postedTime && job.posted_time !== filters.postedTime) {
+            return false;
+        }
+        if (filters.category && filters.category !== job.category) {
+            return false;
+        }
+        if (filters.entryLevel && job.experience_level !== 'Entry Level') {
+            return false;
+        }
+        if (filters.intermediate && job.experience_level !== 'Intermediate') {
+            return false;
+        }
+        if (filters.expert && job.experience_level !== 'Expert') {
+            return false;
+        }
+        if (filters.jobType && filters.jobType !== job.job_type) {
+            return false;
+        }
+        if (filters.clientInfo && !job.client_info.toLowerCase().includes(filters.clientInfo.toLowerCase())) {
+            return false;
+        }
+        if (filters.clientHistory && filters.clientHistory !== job.client_history) {
+            return false;
+        }
+        if (filters.clientLocation && !job.client_location.toLowerCase().includes(filters.clientLocation.toLowerCase())) {
+            return false;
+        }
+        if (filters.projectLength && filters.projectLength !== job.project_length) {
+            return false;
+        }
+        if (filters.hoursPerWeek && filters.hoursPerWeek !== job.hours_per_week) {
+            return false;
         }
         return true;
     });
@@ -73,7 +121,7 @@ const JobListing = () => {
                     ) : (
                         currentJobs.map((job, index) => (
                             <div key={index} className="bg-white p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <div className="flex flex-col space-y-2 ">
+                                <div className="flex flex-col space-y-2">
                                     <div className="flex justify-between items-center">
                                         <h3 className="font-bold text-xl text-blue-600">{job.title}</h3>
                                         <div className="text-gray-600">
@@ -107,7 +155,7 @@ const JobListing = () => {
                                             )}
                                             {job.reviews && (
                                                 <div className="flex items-center space-x-1">
-                                                    <i className="fas fa-comments text-blue-500"></i>
+                                                    <i className="fa fa-comments text-blue-500"></i>
                                                     <span>{job.reviews} reviews</span>
                                                 </div>
                                             )}
