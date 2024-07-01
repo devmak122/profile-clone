@@ -17,7 +17,7 @@ const Footer = () => {
     <div className="mobile:overflow-x-hidden ">
       <div className="relative w-full h-full">
         <div className="trapz1 w-full">
-          <div className="w-full px-4 sm:px-6 md:px-12 lg:px-15 xl:px-32  mt-96 flex justify-center font-poppins font-normal text-xl bg-black">
+          <div className="w-full px-4 sm:px-6 md:px-12 lg:px-15 xl:px-32  flex justify-center font-poppins font-normal text-xl bg-black">
             <div className="w-full flex flex-col h-full">
               <div className="max-w-screen-xl w-full h-full py-7 px-4 sm:px-6 md:px-10 flex flex-col flex-wrap mx-auto">
                 <div className="flex w-full mt-10 sm:mt-20 md:mt-30 lg:mt-40 justify-between">

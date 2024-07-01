@@ -4,11 +4,11 @@ const HeroSection = () => {
     return (
         <div className="bg-white-100 flex flex-col items-center py-3">
             <div className="flex flex-col lg:flex-row lg:space-x-8   mb-5 ml-10">
-                <div className="bg-[#EAF2FD] shadow-md rounded-lg   p-6 w-full lg:w-1/2 mb-6 lg:mb-0 font-poppins" >
-                    <p className="text-gray-700 mb-4">
+                <div className="bg-[#EAF2FD]  shadow-md rounded-lg   p-6 w-full lg:w-1/2 mb-6 lg:mb-0 font-poppins" >
+                    <p className="text-primary  mb-4">
                         You are almost ready to start earning money as a freelancer, simply complete the following steps:
                     </p>
-                    <div className='p-7'>
+                    <div className=' text-primary  p-7'>
                     <StepItem
                         icon="✉️"
                         title="Email Address"
@@ -31,19 +31,19 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col space-y-6  lg:w-1/2">
-                    <div className="bg-white w-[80%] rounded-lg p-6">
+                <div className="flex flex-col  space-y-6  lg:w-1/2">
+                    <div className="bg-white  text-primary w-[80%] rounded-lg p-6">
                         <div className="flex items-center justify-between mx-10 mb-2">
                             <span className="font-semibold">Set up your account</span>
                             <span>50% done</span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
-                            <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '50%' }}></div>
+                            <div className="bg-primary h-2.5 rounded-full" style={{ width: '50%' }}></div>
                         </div>
-                        <button className="w-full bg-blue-600 text-white py-2 rounded">Add your address +5%</button>
+                        <button className="w-full bg-primary text-white py-2 rounded">Add your address +5%</button>
                     </div>
 
-                    <div className="bg-white  w-[80%] rounded-lg p-6">
+                    <div className="bg-white text-primary  font-bold w-[80%] rounded-lg p-6">
                         <div className="flex items-center justify-between">
                             <span className="flex items-center">
                                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt="INR" className="w-6 h-6 mr-2" />
@@ -51,10 +51,10 @@ const HeroSection = () => {
                             </span>
                             <span className="font-bold">₹0.00 INR</span>
                         </div>
-                        <button className="w-full bg-blue-600 text-white py-2 rounded mt-4">Add funds</button>
+                        <button className="w-full bg-primary text-white py-2 rounded mt-4">Add funds</button>
                     </div>
 
-                    <div className="bg-white shadow-md  w-[73%] ml-6 rounded-lg p-6">
+                    <div className="bg-white  text-primary  shadow-md  w-[73%] ml-6 rounded-lg p-6">
 
                         <span>
                             <h3 className="text-lg font-semibold mb-2">0% Project fees</h3>
@@ -77,7 +77,7 @@ const StepItem = ({ icon, title, description, buttonText, buttonDisabled }) => {
                 </div>
             </div>
             <button
-                className={`px-4 py-2 rounded ${buttonDisabled ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-blue-600 text-white'}`}
+                className={`px-4 py-2 rounded ${buttonDisabled ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-primary text-white'}`}
                 disabled={buttonDisabled}
             >
                 {buttonText}

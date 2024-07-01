@@ -54,7 +54,7 @@ const Login = (props) => {
                 <div className="bg-white p-2 rounded-full">
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 
-                <i class="fa fa-google-plus bg-dark" aria-hidden="true"></i>
+                <i className="fa fa-google-plus bg-dark" aria-hidden="true"></i>
                   </div>
                 </div>
                 <span className="ml-4">Sign In with Google</span>

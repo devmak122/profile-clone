@@ -8,7 +8,7 @@ const ManageDropdown = ({ isOpen, onLinkClick }) => {
     };
 
     return (
-        <div className={`${isOpen ? "block" : "hidden"} absolute top-full right-96 w-[450px] left-0 bg-white shadow-lg rounded-lg mt-2 p-4 z-10`}>
+        <div className={`dropdown ${isOpen ? "block" : "hidden"} absolute top-full right-0 w-[450px] bg-white shadow-lg rounded-lg mt-2 p-4 z-10`}>
             <div className="border-b pb-2 mb-2">
                 <div className="flex flex-row justify-between items-center">
                     <h4 className="font-bold text-lg">Recent Projects</h4>

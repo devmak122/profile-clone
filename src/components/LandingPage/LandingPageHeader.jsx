@@ -20,10 +20,10 @@ function Header() {
                     />
                 </Link>
                 <Link to="/">
-                <button className="ml-4 font-semibold font-poppins">How It Works</button>
+                <button className="ml-4 font-semibold font-poppins">How to use it</button>
                 </Link>
                 <Link to ="/">
-                  <button className="ml-4 font-semibold font-poppins">Browse Jobs</button>
+                  <button className="ml-4 font-semibold font-poppins">examples</button>
                   </Link>
             </div>
 
