@@ -9,7 +9,7 @@ function initStore() {
 
   const store = configureStore({
     reducer: {
-      job: jobReducer, // Assuming jobReducer is the default export
+      job: jobReducer, //export  idhar se hoga
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(sagaMiddleware),

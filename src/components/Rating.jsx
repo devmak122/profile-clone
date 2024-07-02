@@ -3,7 +3,7 @@ import Pagination from './Pagination';
 import SearchJobs from './SearchJobs';
 import Filters from './Filters';
 import Rating from './Rating';
-import jobListings from "../jobListings.json"; // Adjust the path if necessary
+import jobListings from "../jobListings.json"; 
 
 const JobListing = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -22,7 +22,7 @@ const JobListing = () => {
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
-        setCurrentPage(1); // Reset currentPage when search term changes
+        setCurrentPage(1); 
     };
 
     const handleLikeClick = (index) => {
@@ -74,7 +74,7 @@ const JobListing = () => {
         if (filters.clientLocation && job.client_location !== filters.clientLocation) {
             return false;
         }
-        // Add more filters as needed
+    
         return true;
     });
 

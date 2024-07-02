@@ -35,7 +35,7 @@ const BrowseDropdown = () => {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setLoading(false);
-        }, 500); // Simulate a network request
+        }, 500); 
 
         return () => clearTimeout(timeout);
     }, [searchTerm]);
@@ -48,7 +48,6 @@ const BrowseDropdown = () => {
         if (title === "Projects") {
             navigate("/job-listing");
         }
-        // Handle other category clicks if needed
     };
 
     return (

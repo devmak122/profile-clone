@@ -55,7 +55,7 @@ const Header = () => {
     };
 
     const toggleBrowse = (e) => {
-        e.preventDefault(); // Prevent default action of Link
+        e.preventDefault(); 
         setBrowseOpen(!browseOpen);
     };
 

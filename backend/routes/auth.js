@@ -8,7 +8,7 @@ const fetchUser = require("../middleware/fetchuser");
 
 
 
-const JWT_SECRET = "HELLO DEV IS A GOOD DEV"; // Replace this with your own secret
+const JWT_SECRET = "HELLO DEV IS A GOOD DEV";
 
 
 // router 1 create user 

@@ -5,7 +5,7 @@ import logo from "../Images/logo.svg";
 
 const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
-  const [user, setUser] = useState(null); // Store user details
+  const [user, setUser] = useState(null); 
   let navigate = useNavigate();
 
   const fetchUserData = async (token) => {
@@ -17,7 +17,7 @@ const Login = (props) => {
       },
     });
     const userData = await response.json();
-    setUser(userData); // Save user data to state
+    setUser(userData); 
   };
 
   const handleSubmit = async (e) => {
@@ -36,7 +36,7 @@ const Login = (props) => {
     if (json.success) {
       localStorage.setItem("token", json.token);
       alert("Login successful!", "success");
-      fetchUserData(json.token); // Fetch user data after login
+      fetchUserData(json.token); 
       navigate("/Dashboard");
     } else {
       alert("Please enter correct email or password", "danger");
