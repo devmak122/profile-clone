@@ -19,5 +19,5 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 
 app.listen(port, () => {
-  console.log(`iNoteBook Backend listening at http://localhost:${port}`);
+  console.log(`clone listening at http://localhost:${port}`);
 });
