@@ -1,12 +1,11 @@
 {
   "name": "inotebook-backend",
   "version": "1.0.0",
-  "description": "iNoteBook-Your notebook on cloud",
+  "description": "iNoteBook - Your notebook on cloud",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-        "build":"npm run build"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,5 +20,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
